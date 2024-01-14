@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Leaf/static/css/main.db112cfd.css",
+    "main.js": "/Leaf/static/js/main.bee832cd.js",
+    "static/js/787.6475de1e.chunk.js": "/Leaf/static/js/787.6475de1e.chunk.js",
+    "static/media/InfoBox2.jpg": "/Leaf/static/media/InfoBox2.c8863f950e10da671324.jpg",
+    "static/media/salad1.jpg": "/Leaf/static/media/salad1.18923ef01fb3ed41d9d7.jpg",
+    "static/media/Juice_img.png": "/Leaf/static/media/Juice_img.f349d3092b878baa677d.png",
+    "static/media/salad2.jpg": "/Leaf/static/media/salad2.543c73d34200f74c1dfc.jpg",
+    "static/media/GreenEarth.jpg": "/Leaf/static/media/GreenEarth.f9bf649bf8dcbe727618.jpg",
+    "static/media/Danger.jpg": "/Leaf/static/media/Danger.6c7de98f1f9cd90853e9.jpg",
+    "static/media/WorkWithUs.avif": "/Leaf/static/media/WorkWithUs.3a964b7765a091b7ad7c.avif",
+    "static/media/header_img.png": "/Leaf/static/media/header_img.d0e71defc22ecdefcf61.png",
+    "static/media/gps_mark_img.avif": "/Leaf/static/media/gps_mark_img.84089528b4f97668087d.avif",
+    "static/media/find_img.png": "/Leaf/static/media/find_img.59cf6e7fef0120a7493e.png",
+    "static/media/Instagram_logo.svg": "/Leaf/static/media/Instagram_logo.e6bd21b17a2f70c70732c979accf6870.svg",
+    "static/media/X_logo.svg": "/Leaf/static/media/X_logo.6a5f093dc3d838c5ac36c3573ea49a31.svg",
+    "static/media/TikTok_logo.svg": "/Leaf/static/media/TikTok_logo.946e42ac48e5fd3b1c32cc1d898417c0.svg",
+    "static/media/YouTube_logo.svg": "/Leaf/static/media/YouTube_logo.ef4429fcc54e1f8ef7cd5334d53dd6a8.svg",
+    "static/media/Facebook_logo.svg": "/Leaf/static/media/Facebook_logo.1c1a430d0494d106a250dddb48011eeb.svg",
+    "index.html": "/Leaf/index.html",
+    "main.db112cfd.css.map": "/Leaf/static/css/main.db112cfd.css.map",
+    "main.bee832cd.js.map": "/Leaf/static/js/main.bee832cd.js.map",
+    "787.6475de1e.chunk.js.map": "/Leaf/static/js/787.6475de1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db112cfd.css",
+    "static/js/main.bee832cd.js"
+  ]
+}
