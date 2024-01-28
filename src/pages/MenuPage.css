@@ -24,6 +24,9 @@
     background-color: white;
     border: 4px solid rgb(184, 255, 184);
 }
+.ChosenBtnBorder{
+    border: 4px solid rgb(128, 0, 0);
+}
 
 
 .MenuItem{

@@ -78,10 +78,10 @@ export default function FoodMenu() {
   function CategoryMenu({ setCategory }) {
     return (
       <div  className="CategoryMenu">
-        <button onClick={() => setCategory('hamburger')}>
+        <button className={category==='hamburger' ? "ChosenBtnBorder" : ""} onClick={() => setCategory('hamburger')}>
           Hamburgers
         </button>
-        <button onClick={() => setCategory('burger')}>
+        <button className="ChosenBtnBorder" onClick={() => setCategory('burger')}>
           Burger
         </button>
         <button onClick={() => setCategory('onigiri')}>
