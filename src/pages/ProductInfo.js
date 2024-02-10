@@ -37,7 +37,7 @@ export default function FoodInfoPage() {
         <p>Додаткова інформація про продукт</p>
         <div className={ChangeTraker === 0 ? 'arrow' : 'arrow_reverse'}></div>
       </button>
-      <div className={ChangeTraker === 0 ? 'none' : "AddictionalInformation"}>
+      <div className={ChangeTraker === 0 ? 'none' : "MoreProductInformation"}>
         <span>Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.Lorem ipsum dolor o kurva bobre de zabor.</span>
       </div>
       <p>Страви які часто замовляють разом з цією</p>
