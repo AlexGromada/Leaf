@@ -1,96 +1,64 @@
 import React, { useState } from "react";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+import { Link} from "react-router-dom";
+import menuItems from "../JSON/Menu.json"
 import "./MenuPage.css"
-import Search from "../Components/NavBar";
-import Hamburger from "../img_folder/hamburger.png"
-import Burger from "../img_folder/burger.avif"
-import Onigiri from "../img_folder/onigiri.png"
-import Salad from "../img_folder/InfoBox2.jpg"
+import NavigationBar from "../Components/NavigationBar";
+import FooterComponent from "../Components/FooterComponent"
 
 export default function FoodMenu() {
 
-  const menuItems = [
-    { id: 1, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 2, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 3, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 4, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 5, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 6, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 7, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 8, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 9, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 10, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 11, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 12, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 13, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 14, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 15, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 16, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 17, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 18, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 19, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 20, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 21, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 22, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 23, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 24, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 25, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 26, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 27, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 28, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 29, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 30, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 31, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 32, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 33, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 34, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 35, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 36, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-    { id: 37, name: 'hamburger', categories: ['hamburger', 'sandwich', 'beef'], imgUrl: Hamburger},
-    { id: 38, name: 'BuRgEr', categories: ['burger'], imgUrl: Burger },
-    { id: 39, name: "Onigiri", categories: ['vegeterian', 'onigiri'], imgUrl: Onigiri},
-    { id: 40, name: "Salad", categories: ['vegeterian', 'salad'], imgUrl: Salad},
-  ]
-
-
+  
   const [category, setCategory] = useState('');
-  let currentMenuItems = menuItems;
+  let currentMenuItems = menuItems.menu;
   if (category) {
-    currentMenuItems = menuItems.filter(item =>
+    currentMenuItems = menuItems.menu.filter(item =>
       item?.categories?.includes(category)
-    )
-  }
-
-  return (
-    <div>
-      <Search/>
+      )
+    }
+    
+    return (
+    <div className="MenuPage">
+      <NavigationBar/>
       <div className="FoodMenu">
-        <CategoryMenu setCategory={setCategory} />
+        <CategoryMenu category={category} setCategory={setCategory} />
         <div className="CurentMenu">
           {currentMenuItems.map(item =>
             <MenuItem key={item.id} item={item} />
-          )}
+            )}
         </div>
       </div>
+      <FooterComponent/>
     </div>
   )
+}
 
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: 'dzifbqu3y'
+  }
+});
 
-  function CategoryMenu({ setCategory }) {
+function CategoryMenu({ category , setCategory }) {
     return (
       <div  className="CategoryMenu">
-        <button className={category==='hamburger' ? "ChosenBtnBorder" : ""} onClick={() => setCategory('hamburger')}>
-          Hamburgers
+        <button className={category==='' ? "ChosenBtnBorder" : "NotChosenBtnBorder"} onClick={() => setCategory('')}>
+          Full Menu
         </button>
-        <button className="ChosenBtnBorder" onClick={() => setCategory('burger')}>
-          Burger
+        <button className={category==='Lunch' ? "ChosenBtnBorder" : "NotChosenBtnBorder"} onClick={() => setCategory('Lunch')}>
+          Lunch
         </button>
-        <button onClick={() => setCategory('onigiri')}>
+        <button className={category==='juice' ? "ChosenBtnBorder" : "NotChosenBtnBorder"} onClick={() => setCategory('juice')}>  
+          Juice
+        </button>
+        <button className={category==='onigiri' ? "ChosenBtnBorder" : "NotChosenBtnBorder"} onClick={() => setCategory('onigiri')}>
           Onigiri
         </button>
-        <button onClick={() => setCategory('salad')}>
+        <button className={category==='salad' ? "ChosenBtnBorder" : "NotChosenBtnBorder"} onClick={() => setCategory('salad')}>
           Salad
         </button>
-        <button onClick={() => setCategory('vegeterian')}>
+        <button className={category==='vegeterian' ? "ChosenBtnBorder" : "NotChosenBtnBorder"} onClick={() => setCategory('vegetarian')}>
           Vegeterian
         </button>
       </div>
@@ -99,25 +67,9 @@ export default function FoodMenu() {
 
   function MenuItem({ item }) {
     return(
-      <div className="MenuItem">
-        <img src={item.imgUrl} alt="Downloading error"/>
+      <Link id={item.id} to={`product/${item.id}`} className="MenuItem">
+        <AdvancedImage cldImg={cld.image("leaf/"+item.ImageName)} alt="Downloading error"/>
         <h3>{item.name}</h3>
-      </div>
+      </Link>
     ) 
   }
-}
-// const [elements, setElements] = useState([]);
-// function addElement() {
-//   const element = {id: elements.length, text: 'hello world'}
-//   setElements([...elements, element]);
-//   console.log(elements)
-// }
-
-// return (
-//   <div>
-//     <div onClick={addElement}>Add Element</div>
-//     {elements.map((element) => {
-//       return <div key={element.id}>{element.text}</div>
-//     })}
-//   </div>
-// )

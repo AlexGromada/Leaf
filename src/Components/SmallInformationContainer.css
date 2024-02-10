@@ -1,10 +1,11 @@
 .LittleInfo{
     width: 12vw;
     height: 30vh;
-    margin: 0 4vw 13vh 0;
+    margin-right: 4vw;
     border: 1px solid rgb(180, 177, 177);
     border-radius: 8px;
     position: relative;
+    overflow: hidden;
 }
 .ImgContainer{
     background-color: greenyellow;

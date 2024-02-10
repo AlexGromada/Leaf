@@ -1,7 +1,6 @@
 .ScrollInfo{
     width: 50vw;
     height: 40vh;
-    margin-top: 4vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -9,7 +8,13 @@
     justify-content: flex-start;
     background-color: green;
 }
+.ScrollBackground{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .TextInsideScroll{
+    position:absolute;
     width: 16vw;
     max-height: 35vh;
     background-color: white;

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import FoodMenu from './pages/MenuPage';
+import ProductInfo from './pages/ProductInfo'
 
 const router = createBrowserRouter([
   {
@@ -12,8 +13,12 @@ const router = createBrowserRouter([
     element: <App/>
   },
   {
-    path: "menu",
+    path: "/Leaf/menu",
     element: <FoodMenu/>
+  },
+  {
+    path: "/Leaf/menu/product/:productId",
+    element: <ProductInfo/>
   }
 ]);
 
