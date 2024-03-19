@@ -1,0 +1,111 @@
+.none{
+    display: none;
+}
+.green_circle, .red_circle{
+    margin: 5px;
+    margin-left: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 90%;
+}
+.green_circle{
+    background-color: rgb(31, 224, 31)
+}
+.red_circle{
+    background-color: rgb(255, 0, 0)
+}
+.results{
+    width: 100%;
+    display: flex;
+    position:relative;
+    z-index: -1;
+    justify-content: space-between;
+    margin-top: 1vh;
+}
+.results>div{
+    display: flex;
+    align-items: center;
+}
+.OpenedRestaurants{
+    width: 50vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+}
+.OpenedRestaurants>img{
+    width: 45vw;
+    height: 45vh;
+    margin: 0 auto;
+    object-fit: cover;
+}
+form{
+    margin: 0 auto;
+    width: 35vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: right;
+}
+label{
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    width: 100%;
+    padding-bottom: 2vh;
+}
+.CustomCitySelect{
+    display: inline-block;
+    border: 3px solid green;
+    border-radius: 8px;
+    width: 65%;
+    margin-left: 35px;
+    position: relative;
+    z-index: 2;
+}
+.CityField, .RegionField{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.CityField>span, .RegionField>span{
+    padding: 15px;
+}
+.CustomArrowBlock{
+    width:12px;
+    height:12px;
+    margin:15px 10px 0 0;
+    border-left:2px solid green;
+    border-bottom: 2px solid green;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.CustomCitySelect>ul{
+    display: none;
+    width: 100%;
+    max-height: 7vh;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+}
+.CityField:focus, .RegionField:focus{
+    border-bottom: 3px solid green;
+}
+.CityField:focus+ul, .RegionField:focus+ul, .CustomCitySelect>ul:active{
+    display: block;
+}
+.CustomCitySelect>ul>li:hover{
+    background-color: lightgreen;
+}
+.CustomCitySelect>ul>li{
+    padding-right: 15px;
+}

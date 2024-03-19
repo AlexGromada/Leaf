@@ -1,0 +1,12 @@
+{
+    "region":[
+        {"City":"Odesa","name":"Primorski", "id":"11"},
+        {"City":"Odesa","name":"Moldovanka", "id":"12"},
+        {"City":"Lviv","name":"Kyivski", "id":"13"}
+    ],
+    "restaurants":[
+        {"info":"some text to read)", "place":["Odesa", "Primorski"], "opened":true, "delivery":false, "id":"21"},
+        {"info":"some text to read)", "place":["Odesa", "Moldovanka"], "opened":false, "delivery":false, "id":"22"},
+        {"info":"some text to read)", "place":["Lviv", "Kyivski"], "opened":true, "delivery":true, "id":"23"}
+    ]
+}

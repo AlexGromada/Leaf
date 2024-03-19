@@ -16,7 +16,7 @@ export default function NavBar(){
             <AdvancedImage cldImg={cld.image("leaf/LeafLogo")} alt='Leaf' />
             <div className="NavBar">
                 <div className="search">
-                    <a href="/#">Відчинені ресторани</a>
+                    <Link to= "/Leaf/restaurants">Відчинені ресторани</Link>
                     <div>
                         <a href="/#"><AdvancedImage cldImg={cld.image("leaf/search")} alt="Downloading error"/>Search</a>
                         <a href="/#"><AdvancedImage cldImg={cld.image("leaf/navigation")} alt="Downloading error"/>Find us</a>
@@ -24,7 +24,7 @@ export default function NavBar(){
                 </div>
                 <nav>
                     <Link to = "/Leaf/menu">Меню</Link>
-                    <a href = "/#">Стратегія впливу</a>
+                    <Link to= "/#">Стратегія впливу</Link>
                     <a href = "/#">Якість та гігієна</a>
                     <a href = "/#">Кар'єра</a>
                 </nav>
