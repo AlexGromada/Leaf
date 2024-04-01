@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Leaf/static/css/main.e1b9e845.css",
-    "main.js": "/Leaf/static/js/main.c2098b60.js",
+    "main.css": "/Leaf/static/css/main.a4cb75af.css",
+    "main.js": "/Leaf/static/js/main.be0df69a.js",
     "static/js/787.6475de1e.chunk.js": "/Leaf/static/js/787.6475de1e.chunk.js",
     "index.html": "/Leaf/index.html",
-    "main.e1b9e845.css.map": "/Leaf/static/css/main.e1b9e845.css.map",
-    "main.c2098b60.js.map": "/Leaf/static/js/main.c2098b60.js.map",
+    "main.a4cb75af.css.map": "/Leaf/static/css/main.a4cb75af.css.map",
+    "main.be0df69a.js.map": "/Leaf/static/js/main.be0df69a.js.map",
     "787.6475de1e.chunk.js.map": "/Leaf/static/js/787.6475de1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1b9e845.css",
-    "static/js/main.c2098b60.js"
+    "static/css/main.a4cb75af.css",
+    "static/js/main.be0df69a.js"
   ]
 }
