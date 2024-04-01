@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import FoodMenu from './pages/MenuPage';
 import ProductInfo from './pages/ProductInfo'
+import FindUs from "./pages/FindUs"
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/Leaf/menu/product/:productId",
     element: <ProductInfo/>
+  },
+  {
+    path: "/Leaf/find_us",
+    element: <FindUs/>
   }
 ]);
 

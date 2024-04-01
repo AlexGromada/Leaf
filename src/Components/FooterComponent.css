@@ -1,4 +1,10 @@
 footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.FooterContainer{
     width: 50vw;
     display: flex;
     flex-direction: column;

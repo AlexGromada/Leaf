@@ -1,0 +1,9 @@
+{
+    "Cities":["Odesa", "Lviv", "Kyiv", "RostikCity"],
+    "CityData":{
+        "Odesa":{"regions":["Primorsky", "Moldavanka", "Kyivsky", "PolitechnicHell"]},
+        "Lviv":{"regions":["I dont know Lviv", "region1", "region2", "region3"]},
+        "Kyiv":{"regions":["Khreshatik", "Maidan", "Kyivsky"]},
+        "RostikCity":{"regions":["Rostik's City"]}
+    }
+}
