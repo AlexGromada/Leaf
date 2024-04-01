@@ -1,0 +1,14 @@
+.FindUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FindUs>form{
+    display: flex;
+    flex-direction: column;
+}
+.FindUs>img{
+    width: 40vw;
+    height: 40vh;
+    object-fit: cover;
+}

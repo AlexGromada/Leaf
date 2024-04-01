@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import FoodMenu from './pages/MenuPage';
 import ProductInfo from './pages/ProductInfo'
-import OpenedRestaurants from './pages/OpenedRestaurants';
+import FindUs from "./pages/FindUs"
 
 const router = createBrowserRouter([
   {
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
     element: <ProductInfo/>
   },
   {
-    path: "/Leaf/restaurants",
-    element: <OpenedRestaurants/>
+    path: "/Leaf/find_us",
+    element: <FindUs/>
   }
 ]);
 

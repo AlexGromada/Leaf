@@ -13,21 +13,20 @@ export default function NavBar(){
 
     return(
         <header>
-            <AdvancedImage cldImg={cld.image("leaf/LeafLogo")} alt='Leaf' />
-            <div className="NavBar">
-                <div className="search">
-                    <Link to= "/Leaf/restaurants">Відчинені ресторани</Link>
-                    <div>
-                        <a href="/#"><AdvancedImage cldImg={cld.image("leaf/search")} alt="Downloading error"/>Search</a>
-                        <a href="/#"><AdvancedImage cldImg={cld.image("leaf/navigation")} alt="Downloading error"/>Find us</a>
+            <div>
+                <AdvancedImage cldImg={cld.image("leaf/LeafLogo")} alt='Leaf' />
+                <div className="NavBar">
+                    <div className="search">
+                            <a href="/#"><AdvancedImage cldImg={cld.image("leaf/search")} alt="Downloading error"/>Search</a>
+                            <Link to="/Leaf/find_us"><AdvancedImage cldImg={cld.image("leaf/navigation")} alt="Downloading error"/>Find us</Link>
                     </div>
+                    <nav>
+                        <Link to = "/Leaf/menu">Меню</Link>
+                        <a href = "/#">Стратегія впливу</a>
+                        <a href = "/#">Якість та гігієна</a>
+                        <a href = "/#">Кар'єра</a>
+                    </nav>
                 </div>
-                <nav>
-                    <Link to = "/Leaf/menu">Меню</Link>
-                    <Link to= "/#">Стратегія впливу</Link>
-                    <a href = "/#">Якість та гігієна</a>
-                    <a href = "/#">Кар'єра</a>
-                </nav>
             </div>
         </header>
     )
